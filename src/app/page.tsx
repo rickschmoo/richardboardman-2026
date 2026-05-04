@@ -52,8 +52,8 @@ export default function Home() {
                    className="text-blue-600 dark:text-blue-400 hover:underline"
                    target="_blank" 
                    rel="noopener noreferrer">
-                  PhD (from 2004 but still surprisingly relevant, that is if you are excited about information overload and personal information management)
-                </a>
+                  PhD 
+                </a> (from 2004 but still surprisingly relevant, that is if you are excited about information overload and personal information management)
               </li>
               <li>
                 <a href="https://github.com/rickschmoo" 
