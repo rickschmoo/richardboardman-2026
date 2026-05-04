@@ -184,7 +184,7 @@ export default function Home() {
           <p>© copyright {year}</p>
           <a
             className="hover:text-[#a13c21] dark:hover:text-[#ffb088]"
-            href="https://github.com/rickschmoo/richardboardman-2025"
+            href="https://github.com/rickschmoo/richardboardman-2026"
             target="_blank"
             rel="noopener noreferrer"
           >
