@@ -3,25 +3,41 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-[#f7f3ec] text-[#161616] dark:bg-[#111412] dark:text-[#f5f0e8]">
-      <main className="mx-auto flex w-full max-w-6xl flex-col gap-16 px-5 py-8 sm:px-8 sm:py-10 lg:px-10">
-        <nav className="flex flex-wrap items-center justify-between gap-4 text-sm text-[#5d645f] dark:text-[#b7bbb7]">
+      <a
+        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:bg-[#161616] focus:px-4 focus:py-3 focus:text-sm focus:font-semibold focus:text-white dark:focus:bg-[#f5f0e8] dark:focus:text-[#111412]"
+        href="#content"
+      >
+        Skip to main content
+      </a>
+
+      <header id="top" className="mx-auto flex w-full max-w-6xl flex-col gap-10 px-5 py-8 sm:px-8 sm:py-10 lg:px-10">
+        <nav
+          aria-label="Primary navigation"
+          className="flex flex-wrap items-center justify-between gap-4 text-sm text-[#5d645f] dark:text-[#b7bbb7]"
+        >
           <a className="font-semibold text-[#161616] dark:text-white" href="#top">
             Richard Boardman
           </a>
-          <div className="flex items-center gap-4">
-            <a className="hover:text-[#a13c21] dark:hover:text-[#ffb088]" href="#work">
-              Work
-            </a>
-            <a className="hover:text-[#a13c21] dark:hover:text-[#ffb088]" href="#background">
-              Background
-            </a>
-            <a className="hover:text-[#a13c21] dark:hover:text-[#ffb088]" href="#contact">
-              Contact
-            </a>
-          </div>
+          <ul className="flex items-center gap-4">
+            <li>
+              <a className="hover:text-[#a13c21] dark:hover:text-[#ffb088]" href="#work">
+                Work
+              </a>
+            </li>
+            <li>
+              <a className="hover:text-[#a13c21] dark:hover:text-[#ffb088]" href="#background">
+                Background
+              </a>
+            </li>
+            <li>
+              <a className="hover:text-[#a13c21] dark:hover:text-[#ffb088]" href="#contact">
+                Contact
+              </a>
+            </li>
+          </ul>
         </nav>
 
-        <section id="top" className="grid gap-10 py-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-end lg:py-16">
+        <div className="grid gap-10 py-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-end lg:py-16">
           <div>
             <p className="mb-5 text-sm font-semibold uppercase tracking-[0.18em] text-[#a13c21] dark:text-[#ffb088]">
               AI transformation · engineering leadership · accessibility
@@ -56,8 +72,10 @@ export default function Home() {
               </a>
             </div>
           </div>
-        </section>
+        </div>
+      </header>
 
+      <main id="content" className="mx-auto flex w-full max-w-6xl flex-col gap-16 px-5 pb-8 sm:px-8 sm:pb-10 lg:px-10">
         <section aria-labelledby="impact-heading" className="grid gap-4 sm:grid-cols-3">
           <h2 id="impact-heading" className="sr-only">
             Leadership focus
@@ -135,7 +153,7 @@ export default function Home() {
                 transformation, accessibility, and strategy-and-operations leadership roles.
               </p>
             </div>
-            <ul className="grid gap-3 text-sm font-semibold sm:grid-cols-2">
+            <ul aria-label="Contact and profile links" className="grid gap-3 text-sm font-semibold sm:grid-cols-2">
               <li>
                 <a className="block border border-[#c7b9a6] bg-[#f7f3ec] px-4 py-4 hover:border-[#a13c21] hover:text-[#a13c21] dark:border-[#414840] dark:bg-[#111412] dark:hover:border-[#ffb088] dark:hover:text-[#ffb088]" href="https://linkedin.com/in/richardboardman" target="_blank" rel="noopener noreferrer">
                   LinkedIn
@@ -159,8 +177,10 @@ export default function Home() {
             </ul>
           </div>
         </section>
+      </main>
 
-        <footer className="flex flex-wrap items-center justify-between gap-4 border-t border-[#d8d0c4] pt-6 text-sm text-[#5d645f] dark:border-[#30362f] dark:text-[#b7bbb7]">
+      <footer className="mx-auto w-full max-w-6xl px-5 pb-8 sm:px-8 sm:pb-10 lg:px-10">
+        <div className="flex flex-wrap items-center justify-between gap-4 border-t border-[#d8d0c4] pt-6 text-sm text-[#5d645f] dark:border-[#30362f] dark:text-[#b7bbb7]">
           <p>© copyright {year}</p>
           <a
             className="hover:text-[#a13c21] dark:hover:text-[#ffb088]"
@@ -170,8 +190,8 @@ export default function Home() {
           >
             source
           </a>
-        </footer>
-      </main>
+        </div>
+      </footer>
     </div>
   );
 }
